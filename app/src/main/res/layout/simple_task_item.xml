@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="7dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E6E6FA"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/titleTaskTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task"
+                    android:textColor="@color/lavender"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/updateTaskButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="80dp"
+                    android:src="@drawable/baseline_edit_24"/>
+
+                <ImageView
+                    android:id="@+id/deleteTaskButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="47dp"
+                    android:src="@drawable/baseline_delete_24"/>
+
+                <CheckBox
+                    android:id="@+id/statusTaskButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@id/titleTaskTextView"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/dueDateTaskTextLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Due Date: "/>
+                <TextView
+                    android:id="@+id/dueDateTaskTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Due Date"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/dueDateTaskTextLabel"
+                    android:layout_marginLeft="3.5dp"/>
+            </RelativeLayout>
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginBottom="3dp"-->
+<!--                android:layout_marginTop="5dp">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/courseTaskTextLabel"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Course: "/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/courseTaskTextView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Course"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_toRightOf="@id/courseTaskTextLabel"-->
+<!--                    android:layout_marginLeft="3.5dp"/>-->
+<!--            </RelativeLayout>-->
+
+            <TextView
+                android:id="@+id/courseTaskTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:id="@+id/moreInfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Information"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/priorityTextLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Priority: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:id="@+id/priorityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Urgent"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/priorityTextLabel"
+                    android:layout_marginLeft="7dp"/>
+                <ImageView
+                    android:id="@+id/urgent_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/priorityTextView"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/urgent_icon"/>
+                <TextView
+                    android:id="@+id/taskStatusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INCOMPLETE"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

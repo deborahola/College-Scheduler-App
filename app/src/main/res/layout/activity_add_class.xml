@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddClassActivity">
+
+
+    <TextView
+        android:id="@+id/addClassHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Add Class"
+        android:textColor="@color/lavender"
+        android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/addClassHeading"
+        android:layout_marginEnd="6dp" />
+
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Subject, Number, Section (e.g., CS 1301 A)"
+        android:textColorHint="@color/light_grey"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_below="@id/addClassHeading"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+
+    <EditText
+        android:id="@+id/coursenameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Course Name (e.g., Intro to Computing)"
+        android:textColorHint="@color/light_grey"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/titleEditText"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="14dp"
+        android:maxLines="1"/>
+
+
+    <RadioGroup
+        android:id="@+id/daysEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_below="@+id/coursenameEditText"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Day(s)"
+            android:textColor="@color/light_grey"
+            android:layout_marginRight="15dp"/>
+        <CheckBox
+            android:id="@+id/Monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon"
+            android:textSize="15dp"/>
+        <CheckBox
+            android:id="@+id/Tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tue"
+            android:textSize="15dp"/>
+        <CheckBox
+            android:id="@+id/Wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wed"
+            android:textSize="15dp"/>
+        <CheckBox
+            android:id="@+id/Thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu"
+            android:textSize="15dp"/>
+        <CheckBox
+            android:id="@+id/Friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fri"
+            android:textSize="15dp"/>
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/timeSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="9.3dp"
+        android:layout_below="@id/daysEditText"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/lavender_border">
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dp" />
+        <EditText
+            android:id="@+id/startTimeEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HH:MM"
+            android:textColorHint="@color/light_grey"
+            android:padding="10dp"
+            android:textSize="10sp"
+            android:layout_gravity="center_vertical" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/AM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+            <RadioButton
+                android:id="@+id/PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical" />
+        <EditText
+            android:id="@+id/endTimeEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HH:MM"
+            android:textColorHint="@color/light_grey"
+            android:padding="10dp"
+            android:textSize="10sp"
+            android:layout_gravity="center_vertical" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+            <RadioButton
+                android:id="@+id/pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Building, Room Number (e.g., CULC 152)"
+        android:textColorHint="@color/light_grey"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/timeSelectionLayout"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="14dp"
+        android:maxLines="1"/>
+
+
+    <EditText
+        android:id="@+id/instructorEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Instructor (e.g., Melinda McDaniel)"
+        android:textColorHint="@color/light_grey"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/locationEditText"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="14dp"
+        android:maxLines="1"/>
+
+
+</RelativeLayout>

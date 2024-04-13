@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".UpdateExamActivity">
+
+
+    <TextView
+        android:id="@+id/editExamHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Edit Exam"
+        android:textColor="@color/lavender"
+        android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/updateSaveExamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/editExamHeading"
+        android:layout_marginEnd="6dp" />
+
+
+    <EditText
+        android:id="@+id/updateTitleExamEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Exam Name (e.g., MATH 1554 Exam 1)"
+        android:textColorHint="@color/light_grey"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_below="@id/editExamHeading"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+    <LinearLayout
+        android:id="@+id/updateExamDateSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="9.3dp"
+        android:layout_below="@id/updateTitleExamEditText"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/lavender_border">
+        <TextView
+            android:id="@+id/dateExamTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exam Date"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp" />
+        <Button
+            android:id="@+id/updatePickExamDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Exam Date"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:textSize="10sp"/>
+        <TextView
+            android:id="@+id/updateSelectedExamDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__-__-____"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/updateExamCourseEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:hint="Course (e.g., Linear Algebra, MATH 1554)"-->
+<!--        android:textColorHint="@color/light_grey"-->
+<!--        android:padding="12dp"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_below="@+id/updateExamDateSelectionLayout"-->
+<!--        android:background="@drawable/lavender_border"-->
+<!--        android:layout_marginTop="14dp"-->
+<!--        android:maxLines="1"/>-->
+
+    <LinearLayout
+        android:id="@+id/updateExamCourseEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="9.3dp"
+        android:layout_below="@id/updateExamDateSelectionLayout"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/lavender_border">
+        <TextView
+            android:id="@+id/courseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp" />
+        <Button
+            android:id="@+id/updatePickExamCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Course"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:textSize="10sp"/>
+        <TextView
+            android:id="@+id/updateSelectedExamCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="________________"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/updateExamTimeSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="9.3dp"
+        android:layout_below="@id/updateExamCourseEditText"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/lavender_border">
+        <TextView
+            android:id="@+id/timeExamTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dp" />
+        <EditText
+            android:id="@+id/updateStartTimeExamEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HH:MM"
+            android:textColorHint="@color/light_grey"
+            android:padding="10dp"
+            android:textSize="10sp"
+            android:layout_gravity="center_vertical" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/updateAMexam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+            <RadioButton
+                android:id="@+id/updatePMexam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical" />
+        <EditText
+            android:id="@+id/updateEndTimeExamEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HH:MM"
+            android:textColorHint="@color/light_grey"
+            android:padding="10dp"
+            android:textSize="10sp"
+            android:layout_gravity="center_vertical" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/updateamexam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+            <RadioButton
+                android:id="@+id/updatepmexam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM"
+                android:gravity="center"
+                android:textSize="10sp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/updateLocationExamEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Building, Room Number (e.g., CULC 152)"
+        android:textColorHint="@color/light_grey"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/updateExamTimeSelectionLayout"
+        android:background="@drawable/lavender_border"
+        android:layout_marginTop="14dp"
+        android:maxLines="1"/>
+
+
+</RelativeLayout>
